@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="804.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.addition.Controller">
+   <children>
+      <TableView fx:id="tablePatients" layoutX="14.0" layoutY="14.0" prefHeight="298.0" prefWidth="1121.0">
+        <columns>
+          <TableColumn fx:id="idPat" prefWidth="49.0" text="ID" />
+          <TableColumn fx:id="surnPat" prefWidth="135.0" text="Прізвище" />
+            <TableColumn fx:id="namePat" minWidth="9.0" prefWidth="110.0" text="Ім'я" />
+            <TableColumn fx:id="adresPat" minWidth="6.0" prefWidth="128.0" text="Адреса" />
+            <TableColumn fx:id="telPat" prefWidth="136.0" text="Тел. номер" />
+            <TableColumn fx:id="medcardPat" prefWidth="156.0" text="Номер мед. картки" />
+            <TableColumn fx:id="diagPat" prefWidth="165.0" text="Діагноз" />
+            <TableColumn fx:id="doctPat" prefWidth="241.0" text="Лікар" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableDoctors" layoutX="14.0" layoutY="323.0" prefHeight="283.0" prefWidth="302.0">
+         <columns>
+            <TableColumn fx:id="idDoct" prefWidth="55.0" text="ID" />
+            <TableColumn fx:id="titleDoct" prefWidth="246.0" text="Прізвище та ім'я лікаря" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableDiagnoses" layoutX="325.0" layoutY="323.0" prefHeight="283.0" prefWidth="302.0">
+         <columns>
+            <TableColumn fx:id="idDiagn" prefWidth="48.0" text="ID" />
+            <TableColumn fx:id="titleDiagn" prefWidth="253.0" text="Діагноз" />
+         </columns>
+      </TableView>
+      <RadioButton fx:id="patientRB" layoutX="24.0" layoutY="667.0" mnemonicParsing="false" text="Пацієнт">
+         <toggleGroup>
+            <ToggleGroup fx:id="check_creature" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="diagnoseRB" layoutX="24.0" layoutY="696.0" mnemonicParsing="false" text="Діагноз" toggleGroup="$check_creature" />
+      <RadioButton fx:id="doctorRB" layoutX="24.0" layoutY="724.0" mnemonicParsing="false" text="Лікар" toggleGroup="$check_creature" />
+      <RadioButton fx:id="task3RB" layoutX="1146.0" layoutY="154.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="187.0" text="Пацієнти номер телефона яких починається з цифри" wrapText="true">
+         <toggleGroup>
+            <ToggleGroup fx:id="check_task" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="task2RB" layoutX="1148.0" layoutY="76.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="195.0" text="Пацієнти, номери мед. карт, яких знаходяться в інтервалі" toggleGroup="$check_task" wrapText="true" />
+      <RadioButton fx:id="task1RB" layoutX="1148.0" layoutY="14.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" text="Пацієнти, які мають вказаний діагноз" toggleGroup="$check_task" wrapText="true" />
+      <Button fx:id="addBtn" layoutX="198.0" layoutY="652.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="145.0" text="Додати" />
+      <Button fx:id="searchBtn" layoutX="198.0" layoutY="691.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="145.0" text="Знайти" />
+      <Button fx:id="delBtn" layoutX="198.0" layoutY="730.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="145.0" text="Видалити" />
+      <TextField fx:id="searchProperty" layoutX="198.0" layoutY="765.0" prefHeight="31.0" prefWidth="256.0" />
+      <Button fx:id="showDiagnBtn" layoutX="733.0" layoutY="361.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" text="Вивести" />
+      <Button fx:id="solveTaskBtn" layoutX="1347.0" layoutY="188.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="158.0" text="Вивести" />
+      <Label layoutX="678.0" layoutY="323.0" text="Вивести список всіх діагнозів та к-ть хворих" />
+      <Label layoutX="14.0" layoutY="623.0" text="Оберіть із ким працювати" />
+      <TextField fx:id="property1" layoutX="1347.0" layoutY="14.0" prefHeight="31.0" prefWidth="174.0" />
+      <TextField fx:id="property2" layoutX="1347.0" layoutY="61.0" prefHeight="31.0" prefWidth="174.0" />
+      <GridPane fx:id="tableLayout" gridLinesVisible="true" layoutX="725.0" layoutY="519.0" prefHeight="230.0" prefWidth="798.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="725.0" layoutY="490.0" text="Таблиця для виводу інформації" />
+   </children>
+</AnchorPane>
